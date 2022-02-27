@@ -890,16 +890,20 @@
 
 // @section machine
 
+// vivo-printer3 nozzle offset from edge of bed when homed at 0,0
+#define X_OFFSET 0
+#define Y_OFFSET 5
+
 // The size of the print bed
-#define X_BED_SIZE 280
+#define X_BED_SIZE 280 - X_OFFSET // Lower as X overhangs bed at X=0
 #define Y_BED_SIZE 300
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define X_MIN_POS X_OFFSET
+#define Y_MIN_POS Y_OFFSET
 #define Z_MIN_POS 0
-#define X_MAX_POS X_BED_SIZE
-#define Y_MAX_POS Y_BED_SIZE
+#define X_MAX_POS X_BED_SIZE + X_OFFSET
+#define Y_MAX_POS Y_BED_SIZE + Y_OFFSET
 #define Z_MAX_POS 400
 
 /**
