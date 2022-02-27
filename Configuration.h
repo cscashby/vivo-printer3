@@ -1,4 +1,4 @@
- /**
+/**
  * Marlin 3D Printer Firmware
  * Copyright (C) 2016 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
@@ -130,11 +130,11 @@
 
 // Optional custom name for your RepStrap or other custom machine
 // Displayed in the LCD "Ready" message
-//#define CUSTOM_MACHINE_NAME "3D Printer"
+#define CUSTOM_MACHINE_NAME "vivo-printer3"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
-//#define MACHINE_UUID "00000000-0000-0000-0000-000000000000"
+#define MACHINE_UUID "bf990351-c508-4d40-ac86-9493dd8cec70"
 
 // @section extruder
 
@@ -373,10 +373,10 @@
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
-  // Ultimaker
-  #define DEFAULT_Kp 22.2
-  #define DEFAULT_Ki 1.08
-  #define DEFAULT_Kd 114
+  // vivo-printer3 w/ Hermes hot end
+  #define DEFAULT_Kp 31.40
+  #define DEFAULT_Ki 2.68
+  #define DEFAULT_Kd 91.96
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -423,11 +423,10 @@
 
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
-  //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 100.00
-  #define DEFAULT_bedKi 5.023
-  #define DEFAULT_bedKd 305.4
+  // Thinker Sv1.2 stock bed vivo-printer3
+  #define DEFAULT_bedKp 195.14
+  #define DEFAULT_bedKi 19.21
+  #define DEFAULT_bedKd 495.57
 
   //120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   //from pidautotune
@@ -776,8 +775,9 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER 35  // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER 0//10  // Y offset: -front +behind [the nozzle]
+ // vivo-printer3
+#define X_PROBE_OFFSET_FROM_EXTRUDER -35  // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER 3//10  // Y offset: -front +behind [the nozzle]
 #if  ENABLED(BLTOUCH)||ENABLED(FIX_MOUNTED_PROBE)
 
 #define Z_PROBE_OFFSET_FROM_EXTRUDER -2.3   // Z offset: -below +above  [the nozzle] //luojin
@@ -786,7 +786,8 @@
 
 #endif
 // Certain types of probes need to stay away from edges
-#define MIN_PROBE_EDGE 10
+// vivo-printer3
+#define MIN_PROBE_EDGE 20
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -890,7 +891,7 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 300
+#define X_BED_SIZE 280
 #define Y_BED_SIZE 300
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
