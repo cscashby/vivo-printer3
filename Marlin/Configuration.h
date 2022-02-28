@@ -374,9 +374,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // vivo-printer3 w/ Hermes hot end
-  #define DEFAULT_Kp 31.40
-  #define DEFAULT_Ki 2.68
-  #define DEFAULT_Kd 91.96
+  #define DEFAULT_Kp 27.50
+  #define DEFAULT_Ki 2.21
+  #define DEFAULT_Kd 85.60
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
