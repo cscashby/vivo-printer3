@@ -1051,7 +1051,7 @@
   #define Z2_SENSE_RESISTOR   91
   #define Z2_MICROSTEPS       16
 
-  #define E0_MAX_CURRENT    1000
+  #define E0_MAX_CURRENT    1300
   #define E0_SENSE_RESISTOR   91
   #define E0_MICROSTEPS       16
 
